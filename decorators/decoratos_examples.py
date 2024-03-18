@@ -1,12 +1,12 @@
 """
 Para crear un decorador tener en cuenta lo siguiente:
 Funcion decoradora:
-    Toma(la funcion que va a decorar) un objeto invocable como argumento, es decir una funcion f.
+    Recibe(la funcion que va a decorar) un objeto invocable como argumento, es decir una funcion f.
     Contiene dentro una funcion(wrap) que envuelve a la funcion(decorada) que ingreso como argumento.
     Retorna un invocable, es decir a la funcion que envulve(wrap): return wrap
 
 Funcion que envuelve(wrap)
-    Recibe los parametros(*args, **kwargs) de la funcion decorada f si es necesario.
+    Recibe los parametros wrap(*args, **kwargs) de la funcion decorada f si es necesario.
     Invoca a la funcion decorada y con argumentos(*args, **kwargs) si es necesario.
     Puede tener codigo antes y despues de invocar a la funcion decorada para agregar
     funcionaminto.
