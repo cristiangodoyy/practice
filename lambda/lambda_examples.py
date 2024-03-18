@@ -65,9 +65,29 @@ def _filter_example():
     filter: filtra los elementos de una secuencia a traves de una condicion,
     produciendo una nueva secuencia. Retorna una lista de los elementos filtrados.
     """
-    positives = filter(lambda x: x > 0, [1, -5, 0, 6, -2, 8])  # <class 'filter'>
-    print(list(positives))  # [1, 6, 8] de convertirlo en una lista para iterarlo
+    # positives = filter(lambda x: x > 0, [1, -5, 0, 6, -2, 8])  # <class 'filter'>
+    # print(list(positives))  # [1, 6, 8] de convertirlo en una lista para iterarlo
+
+    print(list(filter(lambda x: x > 0, [1, -5, 0, 6, -2])))
+
+
+def _reduce_example():
+    """
+    reduce: toma como argumento un conjunto de valores
+    (una lista, una tupla, o cualquier objeto iterable) y lo reduce a un unico valor.
+    """
+    from functools import reduce
+    print(reduce(lambda a, b: a+b, [1, 2, 3, 4]))
+
+
+def _reduce_example_5():
+    # from functools import reduce
+    # print(reduce(lambda a, b: a+b, [1,2,3,4]))
+
+    from functools import reduce
+    print(reduce(lambda a, b: a + b, [1, 2, 3, 4]))
 
 
 if __name__ == '__main__':
-    _filter_example()
+    #_filter_example()
+    _reduce_example_5()
