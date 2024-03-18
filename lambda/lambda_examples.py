@@ -60,5 +60,14 @@ def _map_example():
     # less_than_zero = list(filter(lambda x: x < 0, number_list))
 
 
+def _filter_example():
+    """
+    filter: filtra los elementos de una secuencia a traves de una condicion,
+    produciendo una nueva secuencia. Retorna una lista de los elementos filtrados.
+    """
+    positives = filter(lambda x: x > 0, [1, -5, 0, 6, -2, 8])  # <class 'filter'>
+    print(list(positives))  # [1, 6, 8] de convertirlo en una lista para iterarlo
+
+
 if __name__ == '__main__':
-    pass
+    _filter_example()
